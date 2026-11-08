@@ -34,3 +34,8 @@ Amdahl = 1 / [(1 - p) + p/n]
 limit is **10**.
 
 **Example:** 800 million instructions, CPI 2.5, 1.6 GHz: `(800e6 * 2.5) / 1.6e9 = 1.25s`.
+
+**Moore's law:** a historical observation about transistor-count growth, not a guarantee that clock speed or application
+performance doubles. Technology progressed from tubes to transistors, ICs and microprocessors. RISC is not automatically 
+faster than CISC: compare IC, CPI and clock together.
+
