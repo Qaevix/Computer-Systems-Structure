@@ -29,3 +29,8 @@ Speedup = Old execution time / New execution time
 Amdahl = 1 / [(1 - p) + p/n]
 
 ```
+
+`p` is the parallel fraction; `n` is the processor count. For `p=0.9, n=4`, speedup is about **3.08**; the infinite-processor
+limit is **10**.
+
+**Example:** 800 million instructions, CPI 2.5, 1.6 GHz: `(800e6 * 2.5) / 1.6e9 = 1.25s`.
