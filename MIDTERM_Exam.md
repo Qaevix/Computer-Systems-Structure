@@ -44,5 +44,8 @@ faster than CISC: compare IC, CPI and clock together.
 **Stored program:** Instructions and data occupy the same memory and are both bit patterns. Context determines how the
 CPU interprets a cell.
 
+| Register | Remember its job | 
+| --- | --- | 
+| PC | Address of the next instruction | 
 
 
