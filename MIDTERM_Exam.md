@@ -20,3 +20,12 @@ is the implementation: pipeline, cache sizes and physical circuitry. Two CPU's c
 Transistors -> Gates -> Microarchitectute -> ISA -> OS -> Applications
 
 ```
+Each layer provides services upward and hides implementation details below it. The **ISA** is the hardware/software boundary.
+
+```text
+
+CPU time = Instruction Count * CPI / Clock Freqeuncy
+Speedup = Old execution time / New execution time
+Amdahl = 1 / [(1 - p) + p/n]
+
+```
