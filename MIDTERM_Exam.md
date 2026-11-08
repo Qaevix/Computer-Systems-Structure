@@ -52,5 +52,18 @@ CPU interprets a cell.
 | MDR | Data moving to or from memory |
 | ACC | Arithmetic and logic working result |
 
+**Address bus:** Where? **Data bus:** What value? **Control bus:** Read, write and status signals.
+
+```text
+
+Fetch: MAR <- PC; MDR <- Memory [MAR]; IR <- MDR
+Decode -> Execute -> Write back -> Repeat
+
+```
+The PC advances by the **instruction lenght**, not necessarily one byte. A jump loads a new PC value. 
+`MVI A,O5H; MVI B,08H; ADD B; STA 2000H` leaves `A=0 DH=13` AND `Memory[2000H]=0DH`.
+
+
+
 
 
