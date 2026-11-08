@@ -47,5 +47,10 @@ CPU interprets a cell.
 | Register | Remember its job | 
 | --- | --- | 
 | PC | Address of the next instruction | 
+| IR / CIR | Current instruction |
+| MAR | Address being read or written | 
+| MDR | Data moving to or from memory |
+| ACC | Arithmetic and logic working result |
+
 
 
