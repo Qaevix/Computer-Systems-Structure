@@ -39,3 +39,10 @@ limit is **10**.
 performance doubles. Technology progressed from tubes to transistors, ICs and microprocessors. RISC is not automatically 
 faster than CISC: compare IC, CPI and clock together.
 
+## 2. VON Neumann and the instruction cycle
+
+**Stored program:** Instructions and data occupy the same memory and are both bit patterns. Context determines how the
+CPU interprets a cell.
+
+
+
