@@ -72,5 +72,11 @@ memories and paths; modifies Harvard may use one instruction stages; it is a dif
 
 ## 3. Number Systems - Topic 2a
 
+```text
 
+Value = sum(digit * base ^ position)
+Integer positions: ..., 2, 1, 0
+Fraction positions: -1, -2, ...
+
+```
 
