@@ -63,7 +63,14 @@ Decode -> Execute -> Write back -> Repeat
 The PC advances by the **instruction lenght**, not necessarily one byte. A jump loads a new PC value. 
 `MVI A,O5H; MVI B,08H; ADD B; STA 2000H` leaves `A=0 DH=13` AND `Memory[2000H]=0DH`.
 
+**Bottleneck:** Code fetch and data access compete for a shared path. Harvard separates instruction/data
+memories and paths; modifies Harvard may use one instruction stages; it is a different concept.
 
+**Write it back:** Why are PC and IR different? Why can a lower-GHz CPU finish sooner?
+
+<!-- pdf-page: Numbers and CW1 -->
+
+## 3. Number Systems - Topic 2a
 
 
 
