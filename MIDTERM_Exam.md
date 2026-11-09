@@ -190,6 +190,26 @@ Design flow: **specification -> truth table -> Boolean equations -> simplify
 | MUX | Select one data input for one output | 
 | DEMUX | Route one data input to one selected output | 
 
+For an active-high 2-to-4 decoder, `D0=EA'B`, `D2=EAB'`, `D3=EAB`. If E=0, all outputs are inactive.
+Active-low blocks use the opposite active level.
+
+```text
+2:1 MUX Y=S'D0+SD1
+Half adder: Sum=A XOR B; Carry=AB
+Full adder: Sum=A XOR B XOR Cin
+    Cout = AB+ACin+BCin
+1-bit comparator: GT='; EQ=A XNOR B; LT = A'B
+```
+
+A half adder has no carry-in. Full-adder SUM is odd parity; Cout is the majority function. A ripple adder 
+passes each Cout to the next Cin, so carry-chain delay grows with width.
+
+**Example:** `1101 + 0111 = 1 0100`. The low four bits are 0100 and carry-out is 1. Compare multi-bit
+unsigned bumbers from the MSB downward; the first differing bit decides the result.
+
+### Implementing a function with a MUX
+
+For majority `F=AB+AC+BC`, use A,B as the selects of a 4:1 MUX:
 
 
 
