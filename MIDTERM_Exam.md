@@ -103,4 +103,29 @@ Do not mix vnmsim and MVI instruction set above. Vnmsim uses one accumulator, nu
 | Intruction | Meaning | 
 | --- | --- |
 | LOD X / LOD #1 | Load a cell / immediate value into ACC |
-|
+| STO Y | Store ACC in Y |
+| JMZ n | Jump to n if CC is zero |
+| JMP n / HLT | Unconditional jump / stop |
+
+**Swap needs a temporary cell:** `temp = T1; T1=T2; T2 = temp`. Without it, the original T1 is lost and `(7,3)` 
+can become `(3,3)`
+
+For conditional swap, load X and use JMZ to skip the swap when X is zero. This tests **X != 0**, not exactly
+X=1, unless X is restricted to `{0,1}`.
+
+To compare nonnegative integers without a sign test, decrement **copies** in lockstep and observe which
+reaches zero first. Preserve the originals; test-zero, equality and both input orders. Recount jump targets after edits.
+
+**AI log:** Prompt -> output -> actual test or trace -> accept, fix or reject. A fluent answer is not proof that the program
+works.
+
+**Write it back:** Convert 45.625 to binary. Explain why a swap destroys data without a temp.
+
+<!--pdf-page: Boolean logic -->
+
+## 5. Boolean algebra - Topic 3a
+
+Notation: `+` = OR, `AB` = `AND`, `A'` = NOT A. Precedence: **NOT, AND, OR**, parentheses override it.
+
+
+
