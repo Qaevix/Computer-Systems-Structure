@@ -16,18 +16,14 @@ your own examples below each section when you upload this to GitHub.
 is the implementation: pipeline, cache sizes and physical circuitry. Two CPU's can share an ISA but have different performance.
 
 ```text
-
 Transistors -> Gates -> Microarchitectute -> ISA -> OS -> Applications
-
 ```
 Each layer provides services upward and hides implementation details below it. The **ISA** is the hardware/software boundary.
 
 ```text
-
 CPU time = Instruction Count * CPI / Clock Freqeuncy
 Speedup = Old execution time / New execution time
 Amdahl = 1 / [(1 - p) + p/n]
-
 ```
 
 `p` is the parallel fraction; `n` is the processor count. For `p=0.9, n=4`, speedup is about **3.08**; the infinite-processor
@@ -55,10 +51,8 @@ CPU interprets a cell.
 **Address bus:** Where? **Data bus:** What value? **Control bus:** Read, write and status signals.
 
 ```text
-
 Fetch: MAR <- PC; MDR <- Memory [MAR]; IR <- MDR
 Decode -> Execute -> Write back -> Repeat
-
 ```
 The PC advances by the **instruction lenght**, not necessarily one byte. A jump loads a new PC value. 
 `MVI A,O5H; MVI B,08H; ADD B; STA 2000H` leaves `A=0 DH=13` AND `Memory[2000H]=0DH`.
@@ -73,10 +67,8 @@ memories and paths; modifies Harvard may use one instruction stages; it is a dif
 ## 3. Number Systems - Topic 2a
 
 ```text
-
 Value = sum(digit * base ^ position)
 Integer positions: ..., 2, 1, 0
 Fraction positions: -1, -2, ...
-
 ```
 
