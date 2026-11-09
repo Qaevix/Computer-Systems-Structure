@@ -82,4 +82,25 @@ patterns and a range of `0 ... 2^n-1`. A byte is 8 bits; a nibble is 4. Word wid
 | Binary <-> octal | Group 3 bits from the radix point outward |
 | Binary <-> hex | Group 4 bits from the radix point outward | 
 
-Pad 
+Pad incomplete groups only at the outer ends: left of an integer, right of a fraction.
+
+```text
+152.25 decimal = 10011000.01 binary = 230.2 octal = 98.4 hex
+10110.001 binary = 16 + 4 + 2 1/8 = 22.125 decimal
+1101 0110 1010 binary = D6A hex
+110 101 101 010 binary = 6552 octal = 3434 decimal
+100 decimal = 202 base 7 = 10201 base 3
+```
+**Why does 0.1 repeat in binary?** Reduce the fraction first: `1/10`. A fraction terminates in base `r`
+only if every prime factor of its reduced denominator is also a factor `r`. Binary has only factor 2;
+denominator 10 also contains 5.
+
+## 4. CW1 - vnmsim and verification
+
+Do not mix vnmsim and MVI instruction set above. Vnmsim uses one accumulator, numeric jump targets and
+**JMZ** as its conditional test.
+
+| Intruction | Meaning | 
+| --- | --- |
+| LOD X / LOD #1 | Load a cell / immediate value into ACC |
+|
