@@ -137,13 +137,35 @@ Notation: `+` = OR, `AB` = `AND`, `A'` = NOT A. Precedence: **NOT, AND, OR**, pa
 NOT reverses on bit. XOR detects inequality; XNOR detects quality. NAND and NOR are each universal.
 
 ```text
-Identity:       A+0=A                  A*1=A
-Complement:     A+A'=1                 AA'=0
-Idempotence:    A+A=A                  AA=A
-Absorption      A+AB=A                 A(A+B)=A
-Distributive:   A(B+C)=AB+AC           A+BC=(A+B)(A+C)
-DeMorgan:       (AB)'=A'+B'            (A+B)'=A'B'
-Consensus:      AB+A'C+BC=AB+A'C
-Transposition:  AB+A'C=(A+C)(A'+B)
+Identity:       A + 0 = A                  A * 1 = A
+Complement:     A + A'= 1                  AA'= 0
+Idempotence:    A + A = A                  AA = A
+Absorption      A + AB = A                 A(A+B) = A
+Distributive:   A(B+C) = AB + AC           A + BC = (A+B)(A+C)
+DeMorgan:       (AB)'= A'+ B'              (A+B)'= A'B'
+Consensus:      AB + A'C + BC = AB + A'C
+Transposition:  AB + A'C = (A+C)(A'+B)
 ```
+
+Boolean `1+1=1`, not 2. For **duality**, swap AND/OR and 0/1, leaving literals unchanged. For the **Complement**, also complement each literal.
+
+### Truth Table -> Canonical Form -> Smaller Circut
+
+For variable order `ABC`, row 010 has minterm `A'BC'` and maxterm `(A+B+C)`. A minterm is 1 only on its row; a maxterm
+is only 0 only on its row.
+
+-**Canonical SOP:** OR the minterms of the 1-rows.
+-**Canonical POS:** AND the maxterms of the 0-rows.
+-Canonical terms contain every variable; simplified terms need not.
+
+```text
+F = sum m(2,3,6) = A'BC' + A'BC + ABC'
+  = A'B + ABC'     [Combine C and C']
+  = B(A'+ AC')
+  = B(A'+ C')       [X + X'Y = X + Y]
+  = A'B + BC'      [Minimal SOP]
+
+
+
+
 
