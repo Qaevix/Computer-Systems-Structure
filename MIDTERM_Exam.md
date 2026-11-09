@@ -137,12 +137,12 @@ Notation: `+` = OR, `AB` = `AND`, `A'` = NOT A. Precedence: **NOT, AND, OR**, pa
 NOT reverses on bit. XOR detects inequality; XNOR detects quality. NAND and NOR are each universal.
 
 ```text
-Identity:       A+0=A              A*1=A
-Complement:     A+A'=1             AA'=0
-Idempotence:    A+A=A              AA=A
-Absorption      A+AB=A             A(A+B)=A
-Distributive:   A(B+C)=AB+AC       A+BC=(A+B)(A+C)
-DeMorgan:       (AB)'=A'+B'        (A+B)'=A'B'
+Identity:       A+0=A                  A*1=A
+Complement:     A+A'=1                 AA'=0
+Idempotence:    A+A=A                  AA=A
+Absorption      A+AB=A                 A(A+B)=A
+Distributive:   A(B+C)=AB+AC           A+BC=(A+B)(A+C)
+DeMorgan:       (AB)'=A'+B'            (A+B)'=A'B'
 Consensus:      AB+A'C+BC=AB+A'C
 Transposition:  AB+A'C=(A+C)(A'+B)
 ```
