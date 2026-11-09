@@ -179,4 +179,23 @@ available. Fewer gates does not always mean the shortest critical path.
 
 ## 6. Combinational Blocks - Topic 3b
 
+A combinational output depends only on current inputs, after propagation delay. 
+Design flow: **specification -> truth table -> Boolean equations -> simplify
+
+| Block | Main Job | 
+| --- | --- |
+| Decoder | n address bits select one of 2^n output lines |
+| Encoder | One-hot input becomes a binary index |
+| Priority encoder | Highest-priority active input wins; valid distinguishes no request |
+| MUX | Select one data input for one output | 
+| DEMUX | Route one data input to one selected output | 
+
+
+
+
+
+
+
+
+
 
