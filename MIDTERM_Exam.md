@@ -127,5 +127,15 @@ works.
 
 Notation: `+` = OR, `AB` = `AND`, `A'` = NOT A. Precedence: **NOT, AND, OR**, parentheses override it.
 
+| A | B | AND | OR | XOR | NAND | NOR | XOR | 
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
+
+NOT reverses on bit. XOR detects inequality; XNOR detects quality. NAND and NOR are each universal.
+
+```text
 
 
