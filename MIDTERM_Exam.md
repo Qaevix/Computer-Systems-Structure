@@ -71,4 +71,15 @@ Value = sum(digit * base ^ position)
 Integer positions: ..., 2, 1, 0
 Fraction positions: -1, -2, ...
 ```
+Every digit must be smaller than its base. `128` is invalid in octal. An unsigned `n` -bit word has `2^n`
+patterns and a range of `0 ... 2^n-1`. A byte is 8 bits; a nibble is 4. Word width depends on the architecture.
 
+| Direction | Method | 
+| --- | --- | 
+| Any base -> decimal | Add the weighted digit values |
+| Decimal integer -> base r | Repeated division by r; read remainders bottom-up |
+| Decimal fraction -> base r | Repeated multiplication by r; read integer digits top-down | 
+| Binary <-> octal | Group 3 bits from the radix point outward |
+| Binary <-> hex | Group 4 bits from the radix point outward | 
+
+Pad 
