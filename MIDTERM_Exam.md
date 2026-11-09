@@ -168,6 +168,15 @@ F = sum m(2,3,6) = A'BC' + A'BC + ABC'
 Canonical POS indices:   Product M(0,1,4,5,7)
 Minimal POS:             B(A'+C')
 ```
+SOP becomes and AND-OR network or an equivalent NAND-NAND network. Count interters too if complements are not already 
+available. Fewer gates does not always mean the shortest critical path.
 
+**Propagation delay:** Outputs need time to settle. **Fan-out:** How many inputs an output can drive. In the supplied TTL example, both high and low noise margins are 0.4V.
+
+**Write it back:** Why does a 0 digit mean a complemented literal in a minterm, but not in a maxterm?
+
+<!--pdf-page: Combinational Building Blocks -->
+
+## 6. Combinational Blocks - Topic 3b
 
 
