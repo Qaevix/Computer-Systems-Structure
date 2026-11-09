@@ -165,7 +165,9 @@ F = sum m(2,3,6) = A'BC' + A'BC + ABC'
   = B(A'+ C')       [X + X'Y = X + Y]
   = A'B + BC'      [Minimal SOP]
 
-
+Canonical POS indices:   Product M(0,1,4,5,7)
+Minimal POS:             B(A'+C')
+```
 
 
 
